@@ -1,0 +1,253 @@
+:root {
+  --bg: #ffffff;
+  --text: #171717;
+  --text-muted: #737373;
+  --link: #171717;
+  --link-underline: #d4d4d4;
+  --border: #e5e5e5;
+}
+
+[data-theme="dark"] {
+  --bg: #171717;
+  --text: #fafafa;
+  --text-muted: #a3a3a3;
+  --link: #fafafa;
+  --link-underline: #525252;
+  --border: #262626;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Code Pro", ui-monospace, monospace;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Staggered load animation */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-first {
+  animation: fade-up 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-second {
+  animation: fade-up 0.5s ease-out 0.08s forwards;
+  opacity: 0;
+}
+
+.animate-third {
+  animation: fade-up 0.5s ease-out 0.16s forwards;
+  opacity: 0;
+}
+
+.animate-fourth {
+  animation: fade-up 0.5s ease-out 0.24s forwards;
+  opacity: 0;
+}
+
+.animate-fifth {
+  animation: fade-up 0.5s ease-out 0.32s forwards;
+  opacity: 0;
+}
+
+/* Mobile-first: base = small screens */
+.page {
+  margin: 0 auto;
+  padding: 1.25rem 1rem 4rem;
+  max-width: 100%;
+}
+
+.theme-toggle {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.35rem 0;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  color: var(--text-muted);
+  z-index: 10;
+}
+
+.theme-option {
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.theme-toggle .theme-option[data-option="light"] {
+  color: var(--text);
+}
+
+.theme-toggle .theme-option[data-option="dark"] {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .theme-toggle .theme-option[data-option="light"] {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .theme-toggle .theme-option[data-option="dark"] {
+  color: var(--text);
+}
+
+.theme-toggle:hover .theme-option {
+  color: var(--text);
+}
+
+.hero {
+  margin-bottom: 3.5rem;
+}
+
+.name {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+  letter-spacing: -0.02em;
+}
+
+.name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.name a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.role {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.role a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--link-underline);
+  transition: text-decoration-color 0.2s;
+}
+
+.role a:hover {
+  text-decoration-color: var(--text);
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+section h2 {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  margin: 0 0 0.75rem;
+}
+
+section p {
+  margin: 0 0 0.75rem;
+  color: var(--text-muted);
+}
+
+section p:last-child {
+  margin-bottom: 0;
+}
+
+section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+section li {
+  margin-bottom: 0.5rem;
+}
+
+section li:last-child {
+  margin-bottom: 0;
+}
+
+section a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--link-underline);
+  transition: text-decoration-color 0.2s;
+}
+
+section a:hover {
+  text-decoration-color: var(--text);
+}
+
+.case-studies a {
+  color: var(--text-muted);
+}
+
+.case-studies a:hover {
+  color: var(--text);
+}
+
+.connect a {
+  color: var(--text-muted);
+}
+
+.connect a:hover {
+  color: var(--text);
+}
+
+.footer {
+  padding-top: 2rem;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Desktop: enhance from mobile base */
+@media (min-width: 640px) {
+  .page {
+    max-width: 42rem;
+    padding: 2rem 1.5rem 5rem;
+  }
+
+  .theme-toggle {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    font-size: 0.9rem;
+  }
+}
