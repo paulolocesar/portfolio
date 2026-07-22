@@ -32,18 +32,31 @@
   if (scrollLoop) {
     const firstPage = scrollLoop.querySelector(".page");
     if (firstPage) {
-      const clone = firstPage.cloneNode(true);
-      clone.setAttribute("aria-hidden", "true");
-      scrollLoop.appendChild(clone);
-    }
-
-    function loopScroll() {
-      const pageHeight = firstPage.offsetHeight;
-      if (window.scrollY >= pageHeight) {
-        window.scrollTo(0, window.scrollY - pageHeight);
+      // Three identical copies: the user stays on the middle one, so there
+      // is always a full page of identical content above and below to wrap into.
+      for (let i = 0; i < 2; i++) {
+        const clone = firstPage.cloneNode(true);
+        clone.setAttribute("aria-hidden", "true");
+        scrollLoop.appendChild(clone);
       }
-    }
 
-    window.addEventListener("scroll", loopScroll, { passive: true });
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+
+      // Start on the middle copy (visually identical to the top).
+      window.scrollTo(0, firstPage.offsetHeight);
+
+      function loopScroll() {
+        const pageHeight = firstPage.offsetHeight;
+        if (window.scrollY < pageHeight * 0.5) {
+          window.scrollTo(0, window.scrollY + pageHeight);
+        } else if (window.scrollY >= pageHeight * 1.5) {
+          window.scrollTo(0, window.scrollY - pageHeight);
+        }
+      }
+
+      window.addEventListener("scroll", loopScroll, { passive: true });
+    }
   }
 })();
