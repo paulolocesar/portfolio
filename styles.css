@@ -228,6 +228,47 @@ section a:hover {
   color: var(--text);
 }
 
+/* Case study pages */
+.back-link {
+  margin: 0 0 1.5rem;
+  font-size: 0.9rem;
+}
+
+.back-link a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.back-link a:hover {
+  color: var(--text);
+}
+
+.case-page .meta {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.case-page .bullets {
+  list-style: disc;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+}
+
+.case-page .routes {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.case-page .routes code {
+  font-family: inherit;
+}
+
 .footer {
   padding-top: 2rem;
 }

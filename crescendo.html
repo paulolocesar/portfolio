@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crescendo — Paulo Bellame</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page case-page">
+    <main>
+      <section class="hero animate-first">
+        <p class="back-link"><a href="index.html">&larr; Paulo Bellame</a></p>
+        <h1 class="name">Crescendo</h1>
+        <p class="role">AI-Powered Music Discovery &amp; Community Platform</p>
+        <p class="meta">Role: Full-Stack Developer</p>
+        <p class="meta">Tech: TypeScript, React, Node.js, REST APIs, D3.js, Gemini API, LLM APIs</p>
+      </section>
+
+      <section class="animate-second">
+        <h2>Overview</h2>
+        <p>
+          Crescendo is a full-stack music discovery web platform designed to help users explore artists,
+          reviews, sentiment, and genre-specific recommendations through AI-assisted analysis. The
+          project focused on making music discovery more useful by combining review data, artist
+          metadata, interactive visualizations, and LLM-powered insights.
+        </p>
+      </section>
+
+      <section class="animate-second">
+        <h2>Problem</h2>
+        <p>
+          Music discovery can be fragmented across streaming platforms, review sites, social media, and
+          niche communities. Crescendo was built to organize music-related information into a more
+          focused experience where users could discover artists, understand review sentiment, and
+          explore recommendations by genre or community interest.
+        </p>
+      </section>
+
+      <section class="animate-third">
+        <h2>What I Built</h2>
+        <ul class="bullets">
+          <li>Built and launched a working full-stack music discovery website.</li>
+          <li>Implemented REST API workflows to process music review data and organize artist metadata.</li>
+          <li>Integrated LLM-powered analysis to generate artist insights, review sentiment, and genre-specific recommendations.</li>
+          <li>Developed interactive D3.js dashboards to visualize artist engagement, sentiment trends, and discovery patterns.</li>
+          <li>Engineered prompt templates to improve consistency and relevance in AI-generated music recommendations.</li>
+        </ul>
+      </section>
+
+      <section class="animate-fourth">
+        <h2>Technical Architecture</h2>
+        <p>
+          The platform used a React/TypeScript frontend connected to backend REST API workflows for
+          artist data, review analysis, and recommendation features. LLM APIs were used to analyze
+          music-related content and generate structured insights. D3.js was used to turn review and
+          engagement data into interactive visualizations.
+        </p>
+        <p>Example backend routes included:</p>
+        <pre class="routes"><code>GET  /artists
+GET  /artists/:id
+POST /reviews/analyze
+GET  /recommendations
+GET  /dashboard/sentiment</code></pre>
+      </section>
+
+      <section class="animate-fifth">
+        <h2>What I Learned</h2>
+        <p>
+          Crescendo strengthened my experience with full-stack web development, API design, AI-assisted
+          features, and data visualization. It also helped me think about how to build products that
+          combine user-facing design, backend data workflows, and LLM-powered analysis in a way that
+          feels practical instead of just experimental.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer animate-fifth">
+      <p>© <span class="year">2026</span></p>
+    </footer>
+  </div>
+
+  <button type="button" class="theme-toggle" aria-label="Toggle light/dark mode">
+    <span class="theme-option" data-option="light">Light</span>
+    <span class="theme-option" data-option="dark">Dark</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
