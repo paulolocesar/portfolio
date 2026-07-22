@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PetWell — Paulo Bellame</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page case-page">
+    <main>
+      <section class="hero animate-first">
+        <p class="back-link"><a href="index.html">&larr; Paulo Bellame</a></p>
+        <h1 class="name">PetWell</h1>
+        <p class="role">AI-Powered Pet Health Management App</p>
+        <p class="meta">Role: Full-Stack Developer</p>
+        <p class="meta">Tech: React Native, FastAPI, Firebase, PostgreSQL, AWS, GitHub Actions, OCR, LLM APIs</p>
+      </section>
+
+      <section class="animate-second">
+        <h2>Overview</h2>
+        <p>
+          PetWell is a full-stack mobile app designed to help pet owners store, organize, and share their
+          pets' medical records in one place. The project was built around a common problem: vaccination
+          records, lab results, prescriptions, and clinic documents are often scattered across emails,
+          paper files, photos, and separate portals.
+        </p>
+      </section>
+
+      <section class="animate-second">
+        <h2>Problem</h2>
+        <p>
+          Pet owners often need quick access to medical records when visiting a new clinic, traveling,
+          using boarding services, or coordinating care with another person. PetWell centralizes those
+          records into a structured mobile workflow.
+        </p>
+      </section>
+
+      <section class="animate-third">
+        <h2>What I Built</h2>
+        <ul class="bullets">
+          <li>Created a React Native mobile app for pet profiles and medical record management.</li>
+          <li>Built FastAPI backend workflows for record storage, document upload, and retrieval.</li>
+          <li>Designed PostgreSQL/Firebase data models for pets, owners, records, documents, and access tokens.</li>
+          <li>Implemented QR-based sharing to let users provide controlled access to selected pet records.</li>
+          <li>Integrated OCR and LLM APIs to extract structured information from uploaded medical documents.</li>
+          <li>Used GitHub Actions and AWS to support CI/CD and backend deployment workflows.</li>
+        </ul>
+      </section>
+
+      <section class="animate-fourth">
+        <h2>Technical Architecture</h2>
+        <p>
+          The app connects a React Native frontend to a FastAPI backend. Firebase and PostgreSQL support
+          user data, pet records, document metadata, and access-token based sharing. Uploaded documents
+          can be processed through OCR/LLM APIs to extract useful medical information and reduce manual
+          data entry.
+        </p>
+        <p>Example backend routes included:</p>
+        <pre class="routes"><code>POST /pets
+GET  /pets/:id/records
+POST /records/upload
+POST /records/:id/share
+GET  /share/:accessToken</code></pre>
+      </section>
+
+      <section class="animate-fifth">
+        <h2>What I Learned</h2>
+        <p>
+          PetWell strengthened my experience with full-stack development, API design, database modeling,
+          cloud deployment, and AI-assisted document processing. It also helped me think through
+          real-world product concerns like privacy, record access, and designing software around
+          practical user workflows.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer animate-fifth">
+      <p>© <span class="year">2026</span></p>
+    </footer>
+  </div>
+
+  <button type="button" class="theme-toggle" aria-label="Toggle light/dark mode">
+    <span class="theme-option" data-option="light">Light</span>
+    <span class="theme-option" data-option="dark">Dark</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
